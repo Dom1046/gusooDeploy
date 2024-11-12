@@ -14,6 +14,8 @@ public class MemberController {
 
     public MemberController(MemberService memberService) {
         this.memberService = memberService;
+
+
     }
 
     @PostMapping
