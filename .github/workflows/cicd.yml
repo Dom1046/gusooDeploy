@@ -36,7 +36,7 @@ jobs:
 
       # 현재 시간 가져오기
       - name: Get current time
-        uses: josStorer/get-current-time@v2
+        uses: josStorer/get-current-time@v3
         id: current-time
         with:
           format: YYYY-MM-DDTHH-mm-ss
@@ -52,7 +52,7 @@ jobs:
         with:
           aws_access_key: ${{secrets.AWS_ACCESS_KEY}}
           aws_secret_key: ${{secrets.AWS_SECRET_ACCESS_KEY}}
-          application_name: GusooStudy-elasticbeanstalk-env
+          application_name: gusooStudy-elasticbeanstalk
           environment_name: e-a2ipqyyh8h
           version_label: github-action-${{steps.current-time.outputs.formattedTime}}
           region: ap-northeast-2
