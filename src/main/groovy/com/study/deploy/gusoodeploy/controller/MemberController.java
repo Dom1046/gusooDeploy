@@ -27,4 +27,5 @@ public class MemberController {
     public ResponseEntity<MemberResponseDTO> read(@PathVariable("memberId") Long memberId){
         return ResponseEntity.ok(memberService.read(memberId));
     }
+
 }
