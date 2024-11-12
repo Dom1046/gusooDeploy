@@ -47,13 +47,13 @@ jobs:
         run: echo "artifact=$(ls ./build/libs)" >> $GITHUB_ENV
 
       # 빈스토크 배포 (이름, 환경설정 바꾸기)
-      - name: GusooStudy-elasticbeanstalk-env
-        uses: e-a2ipqyyh8h
+      - name: Beanstalk Deploy
+        uses: einaregilsson/beanstalk-deploy@v20
         with:
           aws_access_key: ${{secrets.AWS_ACCESS_KEY}}
           aws_secret_key: ${{secrets.AWS_SECRET_ACCESS_KEY}}
-          application_name: grepp-web1-test
-          environment_name: Grepp-web1-test-env-1
+          application_name: GusooStudy-elasticbeanstalk-env
+          environment_name: e-a2ipqyyh8h
           version_label: github-action-${{steps.current-time.outputs.formattedTime}}
           region: ap-northeast-2
           deployment_package: ./build/libs/${{env.artifact}}
