@@ -14,6 +14,7 @@ public class MemberRequestDTO {
     private String name;
     private String password;
     private String email;
+    @Builder.Default
     private Rank rank = Rank.DIAMOND;
 
     private String street;
