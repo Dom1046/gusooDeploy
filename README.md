@@ -1,1 +1,2 @@
-배포 연습
+토이프로젝트 : AWS 배포
+EC2, RDS, ELASTIC BEANSTALK
